@@ -400,38 +400,24 @@ export default function FarmersMarkets() {
   }
 
   return (
-    <>
-      {/* Hero Section with same structure as home page */}
-      <section className="bg-gradient-to-br from-neutral-100 to-accent-100 py-12 sm:py-20 px-4 min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-bold text-primary-500 mb-4 sm:mb-6 headline-caps tracking-headline leading-tight">
+    <section className="pt-32 sm:pt-24 pb-16 px-4 bg-gradient-to-br from-neutral-100 to-accent-100 min-h-screen">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary-500 mb-6 headline-caps tracking-headline">
             Farmers Markets in South Florida
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-primary-500 mb-6 sm:mb-8 max-w-3xl mx-auto font-body leading-relaxed-body px-2">
+          <p className="text-xl text-primary-500 font-body leading-relaxed-body max-w-3xl mx-auto">
             Where sunshine, soil, and soul come together. Stroll through the markets, meet growers who care, and pick up flavors that vibe with your body&apos;s natural rhythm.
           </p>
-          
-          {/* Decorative elements */}
-          <div className="mt-8 sm:mt-12 flex justify-center space-x-4 sm:space-x-8 text-2xl sm:text-4xl opacity-60">
-            <span>🥕</span>
-            <span>🌽</span>
-            <span>🍃</span>
-            <span>☀️</span>
-            <span>🧺</span>
-          </div>
         </div>
-      </section>
 
-      {/* Content Section */}
-      <section className="py-16 px-4 bg-neutral-50">
-        <div className="max-w-6xl mx-auto">
-          {/* Day Filter */}
-          <div className="mb-12">
-            <div className="text-center mb-6">
-              <h3 className="font-headline text-2xl font-bold text-primary-500 mb-4">
-                Filter by Day
-              </h3>
-            </div>
+        {/* Day Filter */}
+        <div className="mb-12">
+          <div className="text-center mb-6">
+            <h3 className="font-headline text-2xl font-bold text-primary-500 mb-4">
+              Filter by Day
+            </h3>
+          </div>
           <div className="flex flex-wrap justify-center gap-2 mb-8">
             {daysOfWeek.map((day) => (
               <button
@@ -596,8 +582,7 @@ export default function FarmersMarkets() {
             Get Festival Updates
           </a>
         </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }

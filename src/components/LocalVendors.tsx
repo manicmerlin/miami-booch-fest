@@ -187,32 +187,18 @@ const kombuchaData = {
 
 export default function LocalVendors() {
   return (
-    <>
-      {/* Hero Section with same structure as home page */}
-      <section className="bg-gradient-to-br from-neutral-100 to-accent-100 py-12 sm:py-20 px-4 min-h-screen flex items-center">
-        <div className="max-w-6xl mx-auto text-center">
-          <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-bold text-primary-500 mb-4 sm:mb-6 headline-caps tracking-headline leading-tight">
+    <section className="pt-32 sm:pt-24 pb-16 px-4 bg-gradient-to-br from-neutral-100 to-accent-100 min-h-screen">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary-500 mb-6 headline-caps tracking-headline">
             Kombucha in Florida
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-primary-500 mb-6 sm:mb-8 max-w-3xl mx-auto font-body leading-relaxed-body px-2">
+          <p className="text-xl text-primary-500 font-body leading-relaxed-body max-w-3xl mx-auto">
             Discover the vibrant kombucha community across Florida, from local South Florida artisans to statewide brewers and specialty retailers.
           </p>
-          
-          {/* Decorative elements */}
-          <div className="mt-8 sm:mt-12 flex justify-center space-x-4 sm:space-x-8 text-2xl sm:text-4xl opacity-60">
-            <span>🥤</span>
-            <span>🍃</span>
-            <span>🌱</span>
-            <span>✨</span>
-            <span>🏪</span>
-          </div>
         </div>
-      </section>
 
-      {/* Content Section */}
-      <section className="py-16 px-4 bg-neutral-50">
-        <div className="max-w-6xl mx-auto">
-          {Object.entries(kombuchaData).map(([category, vendors]) => (
+        {Object.entries(kombuchaData).map(([category, vendors]) => (
             <div key={category} className="mb-12">
               <h2 className="font-headline text-3xl font-bold text-primary-500 mb-8 headline-caps tracking-headline border-b-2 border-accent-200 pb-2">
                 {category}
@@ -294,8 +280,7 @@ export default function LocalVendors() {
             Get Festival Updates
           </a>
         </div>
-        </div>
-      </section>
-    </>
+      </div>
+    </section>
   )
 }
