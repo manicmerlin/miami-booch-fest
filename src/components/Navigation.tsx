@@ -18,22 +18,31 @@ export default function Navigation({ activeTab, onTabChange }: NavigationProps) 
     const controlNavbar = () => {
       const currentScrollY = window.scrollY
       
-      if (currentScrollY < 10) {
-        // Always show when at the top
+      if (currentScrollY <= 50) {
+        // Always show when near the top
         setIsVisible(true)
-      } else if (currentScrollY < lastScrollY) {
-        // Scrolling up
+      } else if (currentScrollY < lastScrollY - 10) {
+        // Scrolling up with some threshold
         setIsVisible(true)
-      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
-        // Scrolling down and past 100px
+      } else if (currentScrollY > lastScrollY + 10 && currentScrollY > 150) {
+        // Scrolling down with threshold and past certain point
         setIsVisible(false)
       }
       
       setLastScrollY(currentScrollY)
     }
 
-    window.addEventListener('scroll', controlNavbar)
-    return () => window.removeEventListener('scroll', controlNavbar)
+    let timeoutId: NodeJS.Timeout
+    const handleScroll = () => {
+      clearTimeout(timeoutId)
+      timeoutId = setTimeout(controlNavbar, 10)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      clearTimeout(timeoutId)
+    }
   }, [lastScrollY])
 
   return (
