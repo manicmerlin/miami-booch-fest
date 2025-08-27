@@ -14,12 +14,12 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
-  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID || 'G-YHZHQSF8RF'
 
   return (
     <html lang="en">
       <head>
-        {gaId && <GoogleAnalytics gaId={gaId} />}
+        <GoogleAnalytics gaId={gaId} />
       </head>
       <body className="font-body">
         {children}
