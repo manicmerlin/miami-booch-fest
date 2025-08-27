@@ -89,49 +89,78 @@ export default function VendorSignup() {
 
   if (isSubmitted) {
     return (
-      <div className="min-h-screen bg-gray-50 py-20 px-4">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="bg-white rounded-lg p-8 shadow-sm">
-                        <h1 className="font-headline text-3xl font-bold text-primary-500 mb-4 headline-caps tracking-headline">
-              Submitted!
+      <main>
+        <Navigation activeTab={activeTab} onTabChange={handleTabChange} />
+        
+        {/* Success Hero Section */}
+        <section className="bg-gradient-to-br from-neutral-100 to-accent-100 py-12 sm:py-20 px-4 min-h-screen flex items-center">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-bold text-primary-500 mb-4 sm:mb-6 headline-caps tracking-headline leading-tight">
+              Application Submitted!
             </h1>
-            <p className="text-lg text-primary-500 mb-6 font-body leading-relaxed-body">
-              We&apos;ll let you know once we get things rolling!
+            <p className="text-lg sm:text-xl md:text-2xl text-primary-500 mb-6 sm:mb-8 max-w-3xl mx-auto font-body leading-relaxed-body px-2">
+              Thank you for your interest! We&apos;ll review your application and get back to you soon.
             </p>
-            <div className="space-y-3">
+            
+            {/* Action buttons */}
+            <div className="space-y-4 sm:space-y-0 sm:space-x-4 sm:flex sm:justify-center">
               <Link 
                 href="/"
-                className="block w-full bg-primary-500 text-white py-2 px-4 rounded-lg font-headline font-semibold hover:bg-primary-600 transition-colors text-center"
+                className="block sm:inline-block bg-secondary-500 text-white px-6 sm:px-8 py-4 sm:py-6 rounded-lg text-base sm:text-lg font-headline font-semibold shadow-lg hover:bg-secondary-600 transition-colors"
               >
                 Back to Home
               </Link>
               <button 
                 onClick={() => setIsSubmitted(false)}
-                className="w-full bg-secondary-500 text-white py-2 px-4 rounded-lg font-headline font-semibold hover:bg-secondary-600 transition-colors"
+                className="block sm:inline-block w-full sm:w-auto bg-primary-500 text-white px-6 sm:px-8 py-4 sm:py-6 rounded-lg text-base sm:text-lg font-headline font-semibold shadow-lg hover:bg-primary-600 transition-colors"
               >
                 Submit Another Application
               </button>
             </div>
+            
+            {/* Decorative elements */}
+            <div className="mt-8 sm:mt-12 flex justify-center space-x-4 sm:space-x-8 text-2xl sm:text-4xl opacity-60">
+              <span>✅</span>
+              <span>🎉</span>
+              <span>🥤</span>
+              <span>🌟</span>
+              <span>📧</span>
+            </div>
           </div>
-        </div>
-      </div>
+        </section>
+        <Footer />
+      </main>
     )
   }
 
   return (
     <main>
       <Navigation activeTab={activeTab} onTabChange={handleTabChange} />
-      <div className="min-h-screen bg-gray-50 py-20 px-4">
-        <div className="max-w-2xl mx-auto">
-          <div className="text-center mb-8">
-            <h1 className="font-headline text-4xl font-bold text-primary-500 mb-4 headline-caps tracking-headline">
-              Become a Festival Vendor
-            </h1>
-            <p className="text-lg text-primary-500 font-body leading-relaxed-body">
-              Join the Miami Kombucha Festival and showcase your amazing products to kombucha enthusiasts!
-            </p>
+      
+      {/* Hero Section with same structure as home page */}
+      <section className="bg-gradient-to-br from-neutral-100 to-accent-100 py-12 sm:py-20 px-4 min-h-screen flex items-center">
+        <div className="max-w-6xl mx-auto text-center">
+          <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-bold text-primary-500 mb-4 sm:mb-6 headline-caps tracking-headline leading-tight">
+            Become a Festival Vendor
+          </h1>
+          <p className="text-lg sm:text-xl md:text-2xl text-primary-500 mb-6 sm:mb-8 max-w-3xl mx-auto font-body leading-relaxed-body px-2">
+            Join the Miami Kombucha Festival and showcase your amazing products to kombucha enthusiasts across South Florida!
+          </p>
+          
+          {/* Decorative elements */}
+          <div className="mt-8 sm:mt-12 flex justify-center space-x-4 sm:space-x-8 text-2xl sm:text-4xl opacity-60">
+            <span>🥤</span>
+            <span>🛍️</span>
+            <span>🌟</span>
+            <span>🤝</span>
+            <span>🎉</span>
           </div>
+        </div>
+      </section>
 
+      {/* Form Section */}
+      <section className="py-16 px-4 bg-neutral-50">
+        <div className="max-w-2xl mx-auto">
           <div className="bg-white rounded-lg p-8 shadow-sm">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div>
@@ -262,10 +291,10 @@ export default function VendorSignup() {
               Submit Vendor Application
             </button>
           </form>
+          </div>
         </div>
-        <Footer />
-      </div>
-    </div>
+      </section>
+      <Footer />
     </main>
   )
 }
