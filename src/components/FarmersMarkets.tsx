@@ -378,14 +378,16 @@ export default function FarmersMarkets() {
     const days: string[] = []
     const lowerSchedule = schedule.toLowerCase()
     
-    if (lowerSchedule.includes('monday') || lowerSchedule.includes('mon')) days.push('monday')
-    if (lowerSchedule.includes('tuesday') || lowerSchedule.includes('tue')) days.push('tuesday')
-    if (lowerSchedule.includes('wednesday') || lowerSchedule.includes('wed')) days.push('wednesday')
-    if (lowerSchedule.includes('thursday') || lowerSchedule.includes('thu')) days.push('thursday')
-    if (lowerSchedule.includes('friday') || lowerSchedule.includes('fri')) days.push('friday')
-    if (lowerSchedule.includes('saturday') || lowerSchedule.includes('sat')) days.push('saturday')
-    if (lowerSchedule.includes('sunday') || lowerSchedule.includes('sun')) days.push('sunday')
-    if (lowerSchedule.includes('daily')) days.push('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
+    // Use word boundaries and more precise matching to avoid false positives
+    // Avoid matching "mon" in words like "monthly" by using specific patterns
+    if (/\b(monday|mondays)\b/.test(lowerSchedule) || /\bmon\b/.test(lowerSchedule)) days.push('monday')
+    if (/\b(tuesday|tuesdays)\b/.test(lowerSchedule) || /\btue\b/.test(lowerSchedule)) days.push('tuesday')
+    if (/\b(wednesday|wednesdays)\b/.test(lowerSchedule) || /\bwed\b/.test(lowerSchedule)) days.push('wednesday')
+    if (/\b(thursday|thursdays)\b/.test(lowerSchedule) || /\bthu\b/.test(lowerSchedule)) days.push('thursday')
+    if (/\b(friday|fridays)\b/.test(lowerSchedule) || /\bfri\b/.test(lowerSchedule)) days.push('friday')
+    if (/\b(saturday|saturdays)\b/.test(lowerSchedule) || /\bsat\b/.test(lowerSchedule)) days.push('saturday')
+    if (/\b(sunday|sundays)\b/.test(lowerSchedule) || /\bsun\b/.test(lowerSchedule)) days.push('sunday')
+    if (/\bdaily\b/.test(lowerSchedule)) days.push('monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday')
     
     return days
   }
