@@ -6,6 +6,7 @@ export const metadata: Metadata = {
   title: 'Miami Kombucha Festival 2025',
   description: 'Join us for the ultimate kombucha celebration in South Florida! Discover local vendors, taste amazing flavors, and connect with the kombucha community.',
   keywords: 'kombucha, festival, Miami, South Florida, vendors, health, probiotics',
+  viewport: 'width=device-width, initial-scale=1',
 }
 
 export default function RootLayout({
