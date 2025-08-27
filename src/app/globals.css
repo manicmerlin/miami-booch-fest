@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the earthy kombucha aesthetic */
+@layer base {
+  body {
+    background-color: #F7F2E7; /* Neutral sand background */
+    color: #556B2F; /* Dark olive text - main color */
+    line-height: 1.6;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: Georgia, serif;
+    letter-spacing: 0.05em;
+    color: #556B2F; /* Ensure headings are olive */
+  }
+  
+  .headline-caps {
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+  
+  /* Ensure all text defaults to olive */
+  p, span, div, li, a {
+    color: inherit;
+  }
+}
