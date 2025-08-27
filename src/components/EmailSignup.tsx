@@ -50,7 +50,6 @@ export default function EmailSignup() {
         {isSubmitted ? (
           <div className="bg-accent-100 border-2 border-accent-500 text-primary-500 px-6 py-4 rounded-lg inline-block font-body">
             ✅ Thanks for joining our community!
-              </div>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="max-w-md mx-auto">
