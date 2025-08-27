@@ -49,12 +49,12 @@ export async function POST(request: Request) {
       email,
       type,
       source,
-      id: response.id
+      id: (response as any).id
     })
 
     return Response.json({ 
       success: true, 
-      id: response.id,
+      id: (response as any).id,
       message: 'Successfully subscribed to newsletter!'
     })
 
