@@ -3,7 +3,7 @@ import GoogleAnalytics from '../components/GoogleAnalytics'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Miami Kombucha Festival 2025',
+  title: 'Miami Kombucha Festival',
   description: 'Join us for the ultimate kombucha celebration in South Florida! Discover local vendors, taste amazing flavors, and connect with the kombucha community.',
   keywords: 'kombucha, festival, Miami, South Florida, vendors, health, probiotics',
   viewport: 'width=device-width, initial-scale=1',
