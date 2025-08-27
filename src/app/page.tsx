@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Navigation from '../components/Navigation'
 import Hero from '../components/Hero'
 import EmailSignup from '../components/EmailSignup'
@@ -12,9 +12,22 @@ import Footer from '../components/Footer'
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'home' | 'artisans' | 'markets'>('home')
 
+  // Persist active tab in localStorage
+  useEffect(() => {
+    const savedTab = localStorage.getItem('activeTab') as 'home' | 'artisans' | 'markets'
+    if (savedTab && ['home', 'artisans', 'markets'].includes(savedTab)) {
+      setActiveTab(savedTab)
+    }
+  }, [])
+
+  const handleTabChange = (tab: 'home' | 'artisans' | 'markets') => {
+    setActiveTab(tab)
+    localStorage.setItem('activeTab', tab)
+  }
+
   return (
     <>
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} />
+      <Navigation activeTab={activeTab} onTabChange={handleTabChange} />
       
       {activeTab === 'home' && (
         <main className="min-h-screen">
