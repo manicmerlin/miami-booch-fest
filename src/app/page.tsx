@@ -12,11 +12,16 @@ import Footer from '../components/Footer'
 export default function Home() {
   const [activeTab, setActiveTab] = useState<'home' | 'artisans' | 'markets'>('home')
 
-  // Persist active tab in localStorage
+  // Persist active tab in localStorage, but default to 'home' for new visitors
   useEffect(() => {
     const savedTab = localStorage.getItem('activeTab') as 'home' | 'artisans' | 'markets'
+    // Only use saved tab if it exists and is valid, otherwise default to 'home'
     if (savedTab && ['home', 'artisans', 'markets'].includes(savedTab)) {
       setActiveTab(savedTab)
+    } else {
+      // Ensure new visitors see the Festival tab
+      setActiveTab('home')
+      localStorage.setItem('activeTab', 'home')
     }
   }, [])
 

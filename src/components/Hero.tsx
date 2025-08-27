@@ -2,7 +2,7 @@
 
 export default function Hero() {
   return (
-    <section className="bg-gradient-to-br from-neutral-100 to-accent-100 py-12 sm:py-20 px-4 min-h-screen flex items-center">
+    <section className="bg-gradient-to-br from-neutral-100 to-accent-100 pt-24 sm:pt-32 pb-12 sm:pb-20 px-4 min-h-screen flex items-center">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="font-headline text-4xl sm:text-6xl md:text-8xl font-bold text-primary-500 mb-4 sm:mb-6 headline-caps tracking-headline leading-tight">
           Miami Kombucha Festival
