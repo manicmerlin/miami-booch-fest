@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Link from 'next/link'
 
 type TabType = 'home' | 'artisans' | 'markets'
@@ -11,8 +11,35 @@ interface NavigationProps {
 }
 
 export default function Navigation({ activeTab, onTabChange }: NavigationProps) {
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  useEffect(() => {
+    const controlNavbar = () => {
+      const currentScrollY = window.scrollY
+      
+      if (currentScrollY < 10) {
+        // Always show when at the top
+        setIsVisible(true)
+      } else if (currentScrollY < lastScrollY) {
+        // Scrolling up
+        setIsVisible(true)
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsVisible(false)
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', controlNavbar)
+    return () => window.removeEventListener('scroll', controlNavbar)
+  }, [lastScrollY])
+
   return (
-    <nav className="bg-white border-b-2 border-neutral-200 sticky top-0 z-50 shadow-sm">
+    <nav className={`bg-white border-b-2 border-neutral-200 fixed top-0 left-0 right-0 z-50 shadow-sm transition-transform duration-300 ease-in-out ${
+      isVisible ? 'translate-y-0' : '-translate-y-full'
+    }`}>
       <div className="max-w-6xl mx-auto px-2 sm:px-4">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4 space-y-3 sm:space-y-0">
           {/* Logo */}

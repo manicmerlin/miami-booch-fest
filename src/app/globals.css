@@ -8,6 +8,7 @@
     background-color: #F7F2E7; /* Neutral sand background */
     color: #556B2F; /* Dark olive text - main color */
     line-height: 1.6;
+    padding-top: 80px; /* Account for fixed navigation */
   }
   
   h1, h2, h3, h4, h5, h6 {
