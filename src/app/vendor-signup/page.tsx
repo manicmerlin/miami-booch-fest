@@ -96,7 +96,7 @@ export default function VendorSignup() {
               Submitted!
             </h1>
             <p className="text-lg text-primary-500 mb-6 font-body leading-relaxed-body">
-              We'll let you know once we get things rolling!
+              We&apos;ll let you know once we get things rolling!
             </p>
             <div className="space-y-3">
               <Link 

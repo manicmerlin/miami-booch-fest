@@ -266,7 +266,7 @@ export default function LocalVendors() {
             Join the Florida Kombucha Community!
           </h3>
           <p className="text-lg text-primary-500 mb-6 font-body leading-relaxed-body">
-            From South Florida artisans to statewide brewers, Florida's kombucha scene is thriving. 
+            From South Florida artisans to statewide brewers, Florida&apos;s kombucha scene is thriving. 
             Connect with these amazing producers and discover your new favorite brew!
           </p>
           <a 

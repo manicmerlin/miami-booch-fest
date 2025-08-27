@@ -72,10 +72,10 @@ export default function NewsletterPopup() {
           <div className="text-center">
             <div className="text-4xl mb-4">🎉</div>
             <h3 className="text-xl font-bold text-green-600 mb-2">
-              You're In!
+              You&apos;re In!
             </h3>
             <p className="text-gray-600">
-              Thanks for joining our kombucha community. You'll be the first to know about festival updates!
+              Thanks for joining our kombucha community. You&apos;ll be the first to know about festival updates!
             </p>
           </div>
         ) : (
@@ -83,7 +83,7 @@ export default function NewsletterPopup() {
             <div className="text-center mb-6">
               <div className="text-4xl mb-3">🥤</div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">
-                Don't Miss Out!
+                Don&apos;t Miss Out!
               </h3>
               <p className="text-gray-600">
                 Get exclusive updates about the Miami Kombucha Festival, including early vendor announcements and special perks.

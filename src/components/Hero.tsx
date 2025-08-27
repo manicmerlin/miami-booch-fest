@@ -8,7 +8,7 @@ export default function Hero() {
           Miami Kombucha Festival
         </h1>
         <p className="text-xl md:text-2xl text-primary-500 mb-8 max-w-3xl mx-auto font-body leading-relaxed-body">
-          South Florida's kombucha festival — a vibrant celebration of craft brews, mindful makers, and a community vibe that feels as good as it tastes.
+          South Florida&apos;s kombucha festival — a vibrant celebration of craft brews, mindful makers, and a community vibe that feels as good as it tastes.
         </p>
         <a 
           href="#email-signup"

@@ -407,7 +407,7 @@ export default function FarmersMarkets() {
             Farmers Markets in South Florida
           </h1>
           <p className="text-xl text-primary-500 font-body leading-relaxed-body max-w-3xl mx-auto">
-            Where sunshine, soil, and soul come together. Stroll through the markets, meet growers who care, and pick up flavors that vibe with your body's natural rhythm.
+            Where sunshine, soil, and soul come together. Stroll through the markets, meet growers who care, and pick up flavors that vibe with your body&apos;s natural rhythm.
           </p>
         </div>
 

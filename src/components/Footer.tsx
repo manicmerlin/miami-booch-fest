@@ -43,7 +43,7 @@ export default function Footer() {
           <div>
             <h3 className="font-headline text-xl font-bold mb-4 headline-caps tracking-headline">Miami Kombucha Festival</h3>
             <p className="text-primary-200 mb-4 font-body leading-relaxed-body">
-              South Florida's premier kombucha celebration featuring local artisans, 
+              South Florida&apos;s premier kombucha celebration featuring local artisans, 
               tastings, and vibrant community connection.
             </p>
             <div className="space-y-2 text-primary-200 font-body">
