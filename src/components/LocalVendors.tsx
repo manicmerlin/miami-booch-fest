@@ -187,7 +187,7 @@ const kombuchaData = {
 
 export default function LocalVendors() {
   return (
-    <section className="py-16 px-4 bg-neutral-50 min-h-screen">
+    <section className="pt-24 pb-16 px-4 bg-neutral-50 min-h-screen">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="font-headline text-4xl md:text-5xl font-bold text-primary-500 mb-6 headline-caps tracking-headline">
